@@ -15,7 +15,8 @@ body {
 
 @media (min-width: 30em){
     html {
-        background-image: url(../photos/bg01.jpg);
+        // background-image: url(../photos/bg01.jpg);
+        backgroud-image: url(adrienKoumgangT.github.io/photos/bg01.jpg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
