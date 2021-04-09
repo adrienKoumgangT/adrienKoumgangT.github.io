@@ -1,0 +1,66 @@
+/*Traitement appliquer à tout le fichier html*/
+html {
+    background-color: #ffffff;
+}
+
+/*Traitement appliquer à tout le grand corps de ma page*/
+body {
+    width: 100%;
+    /*background-image: url(../photos/bg01.jpg);*/
+    background-color: #fff;
+    padding: 0;
+    border: 0;
+    font-size: 110%;
+}
+
+@media (min-width: 30em){
+    html {
+        background-image: url(../photos/bg01.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    body {
+        margin: 1.5% 1.5% 1.5% 1.5%;
+    }
+}
+
+/*Traitement de tous les tetes de page*/
+header {
+    background-color: rgb(0, 204, 255);
+    border: 1px solid black;
+    margin: 5px 5% 5px;
+}
+
+main {
+    background-color: white;
+    border: 1px solid black;
+    margin: 20px 5% 5px;
+}
+
+/*traitement de tous les pieds de pages*/
+footer {
+    background-color: rgb(102, 105, 105);
+    border: 1px solid black;
+    margin: 5px 5% 5px;
+}
+
+/*Traitement des listes */
+header div nav ul li {
+    list-style: none;
+}
+
+/*Traitement à appliquer à tous les liens*/
+a:link {
+    color: rgb(85, 119, 212);
+}
+
+a:visited {
+    color: rgb(0, 0, 255);
+}
+
+a:hover {
+    text-decoration: none;
+    color: rgb(231, 123, 123);
+}
