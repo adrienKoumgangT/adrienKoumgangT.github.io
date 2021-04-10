@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <!--Definition des méta données du site web-->
-        
+  <head>
+      <!--Definition des méta données du site web-->
+
         <!--Sert à spécifier le type de codification pour les caractères qui
             seront utiliser dans la page web-->
         <meta charset="utf-8">
-        
+
         <!--Ces lignes servent à donner une description du contenue de la page web
             durant les résultats d'une recherche sur internet-->
         <meta property="image" content="../photos/adrien001.JPG">
@@ -20,10 +20,10 @@
                                         Site web, base de données, système informatique,
                                         Software engegnering, problem solving,
                                         Etudiant, Computer Science, IA">
-        
+
         <!--Icone de la page web-->
         <link rel="shortcut icon" href="../photos/adrien002.JPG" type="image">
-        
+
         <!--link aux différents fichiers CSS qui s'appliquent à cette page-->
         <link rel="stylesheet" href="../css/main.css">
 
@@ -37,15 +37,24 @@
     <body class="frontpage">
         <!-- Voici notre en-tete principale utilisée dans toutes les pages
             de notre site web -->
-        <header class="page-header" id="top">
-            ::before
-            <div id="headLogo" style="text-align: right">
-                <a id="logolink" href="../index.html">
-                    <img id="logoimg" src="../photos/logo.png" alt="logo: Computer Science">
-                </a>
-            </div>
+    <header class="block-header" id="top">
 
-             <!--Definizione della barra di navigazione della pagina web-->
+      <div class="my_name_title">
+        <h1 id="site-title">
+          <span>
+            <a href="#" title="Adrien Koumgang Tegantchouang">
+              Adrien Koumgang Tegantchouang
+            </a>
+          </span>
+        </h1>
+        <div id="site-description">Welcome!</div>
+        <div class="container">
+          <img src="../photos/bg02.jpg" alt="" id="bghead">
+          <div class="bottomleft">Adrien Koumgang Tegantchouang</div>
+        </div>
+      </div>
+
+        <!--Definizione della barra di navigazione della pagina web-->
              <div class="menu-list">
                 <nav id="menu">
                     <ul id="menu-sections">
@@ -74,7 +83,6 @@
                         <li id="menu-translations">
                             <a href="#translation" data-toggle="collapse" data-target="#translation">
                                 <em class="fa fa-globe fa-lg">
-                                    ::before
                                     <span class="material-icons-sharp">language</span>
                                 </em>
                                 Changer de langue
@@ -83,20 +91,20 @@
                     </ul>
                 </nav>
              </div>
-        </header>
+    </header>
 
         <!--Contenu de la page-->
-        <main>
+    <main>
 
-            <!-- Il contient un article -->
-            <h2>Adrien KOUMGANG TEGANTCHOUANG</h2>
-            <p>Etudiant à l'université de Pise</p>
+      <!-- Il contient un article -->
+      <h2>Adrien KOUMGANG TEGANTCHOUANG</h2>
+      <p>Etudiant à l'université de Pise</p>
 
-        </main>
+    </main>
 
         <!--Definizione di piede di pagina-->
-        <footer>
-            <p>@Copyright 2021. Tous droits réservés.</p>
-        </footer>
-    </body>
+    <footer>
+      <p>@Copyright 2021. Tous droits réservés.</p>
+    </footer>
+  </body>
 </html>
