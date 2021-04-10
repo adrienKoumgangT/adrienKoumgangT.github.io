@@ -13,6 +13,7 @@ body {
     font-size: 110%;
 }
 
+/*
 @media (min-width: 30em){
     html {
         background-image: url(../photos/bg01.jpg);
@@ -20,7 +21,7 @@ body {
         background-position: center;
         background-size: cover;
     }
-
+*/
     body {
         margin: 1.5% 1.5% 1.5% 1.5%;
     }
