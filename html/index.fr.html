@@ -28,8 +28,6 @@
         <link rel="stylesheet" href="../css/main.css">
 
         <!--Link aux différents fichiers JavaScript qui s'appliqueront à cette page-->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Materila+Icons">
-        <style>@import url('https://fonts.googleapis.com/');</style>
 
         <!-- Titre de ma page web -->
         <title>Adrien Web Site</title>
@@ -42,55 +40,55 @@
       <div class="my_name_title">
         <h1 id="site-title">
           <span>
-            <a href="#" title="Adrien Koumgang Tegantchouang">
-              Adrien Koumgang Tegantchouang
+            <a href="#" title="Adrien Koumgang Tegantchouang" id="linktitle">
+              Adrien Koumgang Tegantchouang Home Page
             </a>
           </span>
         </h1>
         <div id="site-description">Welcome!</div>
         <div class="container">
           <img src="../photos/bg02.jpg" alt="" id="bghead">
-          <div class="bottomleft">Adrien Koumgang Tegantchouang</div>
+          <div class="bottomleft" id="test-on-picture">Adrien Koumgang Tegantchouang</div>
         </div>
       </div>
 
         <!--Definizione della barra di navigazione della pagina web-->
-             <div class="menu-list">
-                <nav id="menu">
-                    <ul id="menu-sections">
-                        <li>
-                            <a href="#">Acceuil</a>
-                        </li>
-                        <li>
-                            <a href="#">Carrières</a>
-                        </li>
-                        <li>
-                            <a href="#">Mes services</a>
-                        </li>
-                        <li>
-                            <a href="#">Contacts</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li id="menu-search-box">
-                            <!--Un formulaire de recherche est une autre façon de naviguer de façon
-                            non-linéaire dans un site-->
-                            <form method="GET" action="#">
-                                <input type="search" name="q" placeholder="Que cherchez-vous?">
-                                <input type="submit" value="Rechercher">
-                            </form>
-                        </li>
-                        <li id="menu-translations">
-                            <a href="#translation" data-toggle="collapse" data-target="#translation">
-                                <em class="fa fa-globe fa-lg">
-                                    <span class="material-icons-sharp">language</span>
-                                </em>
-                                Changer de langue
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-             </div>
+        <nav id="menuhead">
+            <ul id="menu-menu" class="menu">
+              <li id="menu-item-01" class="menu-item">
+                <a href="#">Acceuil</a>
+              </li>
+              <li id="menu-item-02" class="menu-item">
+                <a href="#">Carrières</a>
+              </li>
+              <li id="menu-item-03" class="menu-item">
+                <a href="#">Mes services</a>
+              </li>
+              <li id="menu-item-04" class="menu-item">
+                <a href="#">Contacts</a>
+              </li>
+            </ul>
+            <ul id="menu-search-and-language">
+              <li id="menu-search-box">
+                <!--Un formulaire de recherche est une autre façon de naviguer
+                    de façon non-linéaire dans un site-->
+                <form method="GET" action="#">
+                  <input type="search" name="q"
+                          placeholder="Que cherchez-vous?">
+                  <input type="submit" value="Rechercher">
+                </form>
+              </li>
+              <li id="menu-translations">
+                <a href="#translation" data-toggle="collapse"
+                                    data-target="#translation">
+                  <em class="fa fa-globe fa-lg">
+                    <span class="material-icons-sharp">language</span>
+                  </em>
+                    Changer de langue
+                </a>
+              </li>
+            </ul>
+        </nav>
     </header>
 
         <!--Contenu de la page-->
