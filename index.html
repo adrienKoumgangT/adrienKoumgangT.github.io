@@ -3,30 +3,36 @@
     <head>
         <!--Definition des méta données du site web-->
         
-        <!--serve a specificare il tipo di codifica per i caratteri che saranno
-            contenuti nella page web-->
+        <!--Sert à spécifier le type de codification pour les caractères qui
+            seront utiliser dans la page web-->
         <meta charset="utf-8">
         
-        <!--Queste ligne servono a dare una descrizione del contenuto della page
-            web durante sul risultato di una ricerca su internet-->
+        <!--Ces lignes servent à donner une description du contenue de la page web
+            durant les résultats d'une recherche sur internet-->
         <meta property="image" content="photos/adrien001.JPG">
         <meta property="description" content="">
+        <meta name="description" content="Adrien Koumgang Tegantchouang est un étudiant en dernière année informatique
+                                            à l'université de Pise en Italie">
         <meta property="title" content="Adrien K.T">
         <meta name="Adrien KOUMGANG TEGANTCHOUANG" content="autobiography">
+        <meta name="author" content="Adrien KOUMGANG TEGANTCHOUANG">
+        <meta name="keywords" content="Informtatique, Informaticien,
+                                        Site web, base de données, système informatique,
+                                        Software engegnering, problem solving,
+                                        Etudiant, Computer Science, IA">
         
-        <!--Icona della pagina web-->
+        <!--Icone de la page web-->
         <link rel="shortcut icon" href="photos/adrien002.JPG" type="image">
         
-        <!--link ai diversi file CSS che si applicano a questa pagina-->
+        <!--link aux différents fichiers CSS qui s'appliquent à cette page-->
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/fonts.css">
-        <link rel="stylesheet" href="css/print.css">
 
-        <!--Link ai diversi file JavaScript che si applicano a questa pagina-->
-        
+        <!--Link aux différents fichiers JavaScript qui s'appliqueront à cette page-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Materila+Icons">
+        <style>@import url('https://fonts.googleapis.com/');</style>
 
-        <!-- Titolo della mia pagina web -->
-        <title>Adrien Web</title>
+        <!-- Titre de ma page web -->
+        <title>Adrien Web Site</title>
     </head>
     <body class="frontpage">
         <!-- Voici notre en-tete principale utilisée dans toutes les pages
@@ -34,52 +40,29 @@
         <header class="page-header" id="top">
             ::before
             <div id="headLogo" style="text-align: right">
-                <a id="logo" href="index.html">
-                    <span>Adrien KOUMGANG TEGANTCHOUANG</span>
+                <a id="logolink" href="index.html">
+                    <img id="logoimg" src="photos/logo.png" alt="logo: Computer Science">
                 </a>
             </div>
 
              <!--Definizione della barra di navigazione della pagina web-->
              <div class="menu-list">
                 <nav id="menu">
-                    <ul>
-                        <li id="menu-donate">
-                            <a href="#">
-                                <em class="fa fa-heart-o fa-lg">
-                                    ::before
-                                </em>
-                                Donazioni
-                            </a>
-                        </li>
-                    </ul>
                     <ul id="menu-sections">
                         <li>
                             <a href="#">Acceuil</a>
                         </li>
                         <li>
-                            <a href="#">Projects</a>
+                            <a href="#">Carrières</a>
+                        </li>
+                        <li>
+                            <a href="#">Mes services</a>
                         </li>
                         <li>
                             <a href="#">Contacts</a>
                         </li>
                     </ul>
                     <ul>
-                        <li>
-                            <a href="#">
-                                <em class="fa fa-sign-in fa-lg">
-                                    ::before
-                                </em>
-                                Login
-                            </a>
-                        </li>
-                        <li id="menu-translations">
-                            <a href="#translation" data-toggle="collapse" data-target="#translation">
-                                <em class="fa fa-globe fa-lg">
-                                    ::before
-                                </em>
-                                Changer de langue
-                            </a>
-                        </li>
                         <li id="menu-search-box">
                             <!--Un formulaire de recherche est une autre façon de naviguer de façon
                             non-linéaire dans un site-->
@@ -87,6 +70,15 @@
                                 <input type="search" name="q" placeholder="Que cherchez-vous?">
                                 <input type="submit" value="Rechercher">
                             </form>
+                        </li>
+                        <li id="menu-translations">
+                            <a href="#translation" data-toggle="collapse" data-target="#translation">
+                                <em class="fa fa-globe fa-lg">
+                                    ::before
+                                    <span class="material-icons-sharp">language</span>
+                                </em>
+                                Changer de langue
+                            </a>
                         </li>
                     </ul>
                 </nav>

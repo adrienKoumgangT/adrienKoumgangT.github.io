@@ -33,6 +33,22 @@ header {
     margin: 5px 5% 5px;
 }
 
+div.menu-list {
+    display: inline;
+}
+
+#menu {
+    display: inline;
+}
+
+#logoimg {
+    width: 5%;
+}
+
+#menu-sections li{
+    display: inline; /*Aligne les éléments de la liste en ligne*/
+}
+
 main {
     background-color: white;
     border: 1px solid black;
