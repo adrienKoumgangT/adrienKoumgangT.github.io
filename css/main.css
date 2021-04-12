@@ -3,20 +3,42 @@ Author: Adrien Koumgang Tegantchouang
 Version: 1.0
 */
 
-/*Traitement appliquer à tout le fichier html*/
-html {
-    background-color: #ffffff;
+/*
+    Déclaration de variable à utiliser dans tous le document
+*/
+:root {
+    /*Déclaration de couleurs*/
+    --green: #00FF00;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+/*Définition des themes à appliquer à ma page web*/
+/*The light: font en blanc et texte en noir*/
+.light-theme {
+    --bg: var(--white);
+    --fontColor: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
+}
+
+/*The dark: font en noir et texte en blanc*/
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--white);
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
+}
+
+/*Style à appliquer à tous les élements presents dans la page*/
+* {
+    color: var(--fontColor);
+    font-family: helvetica;
 }
 
 /*Traitement appliquer à tout le grand corps de ma page*/
 body {
-    width: 90%;
-    /*background-image: url(../photos/bg01.jpg);*/
-    background-color: #fff;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    position: relative;
+    background: var(--bg);
 }
 
 
@@ -31,79 +53,22 @@ header {
     margin: 5px 5% 5px 5%;
 }
 
-#site-title {
-  font-size: 30px;
-  line-height: 36px;
+.btn {
+    position: absolute;
+    top: 20px;
+    left: 90%;
+    width: 50px;
+    height: 50px;
+    border:  none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
 }
 
-#linktitle {
-  color: black;
-  text-decoration: none;
-}
-
-.container {
-  position: relative;
-}
-
-#bghead {
-  width: 100%;
-  height: 200px;
-  opacity: 0.7;
-  border-top: 4px solid black;
-}
-
-.bottomleft {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-  font-size: 18px;
-}
-
-header #test-on-picture {
-  color: white;
-}
-
-div.menu-header {
-    display: inline;
-}
-
-#menuhead {
-    display: inline;
-}
-
-#logoimg {
-    width: 5%;
-}
-
-#list-menu {
-  float: left;
-}
-
-#search-language {
-  float: right;
-}
-
-#menu-menu li{
-    display: inline; /*Aligne les éléments de la liste en ligne*/
-    text-align: center;
-    margin: 0 auto;
-}
-
-#menuheader ul, div.menu ul {
-  list-style: none;
-  margin: 0;
-}
-
-#search-language {
-  display: inline;
-}
-
-#search-language, #menu-search-and-language {
-  display: inline;
+.btn:focus {
+    outline-style: none;
 }
 
 main {
-    background-color: white;
     /*border: 1px solid black;*/
     margin: 10px 5% 5px;
 }
@@ -113,23 +78,4 @@ footer {
     background-color: rgb(102, 105, 105);
     /*border: 1px solid black;*/
     margin: 5px 5% 5px;
-}
-
-/*Traitement des listes */
-header div nav ul li {
-    list-style: none;
-}
-
-/*Traitement à appliquer à tous les liens*/
-a:link {
-    color: rgb(85, 119, 212);
-}
-
-a:visited {
-    color: rgb(0, 0, 255);
-}
-
-a:hover {
-    text-decoration: none;
-    color: rgb(231, 123, 123);
 }
