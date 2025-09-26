@@ -1,129 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!--Definition des méta données du site web-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrien K.T - Data Engineer</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <!-- Navigation Menu -->
+            <nav data-lang="en">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="pages/about.html">About</a></li>
+                    <li><a href="pages/portfolio.html">Portfolio</a></li>
+                    <li><a href="pages/cv.html">CV</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
 
-        <!--Sert à spécifier le type de codification pour les caractères qui
-            seront utiliser dans la page web-->
-        <meta charset="utf-8">
+            <nav data-lang="fr">
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="pages/about.html">À Propos</a></li>
+                    <li><a href="pages/portfolio.html">Portfolio</a></li>
+                    <li><a href="pages/cv.html">CV</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
 
-        <!--Ces lignes servent à donner une description du contenue de la page web
-            durant les résultats d'une recherche sur internet-->
-        <meta property="image" content="photos/adrien001.JPG">
-        <meta property="description" content="">
-        <meta name="description" content="Adrien Koumgang Tegantchouang est un étudiant en dernière année informatique
-                                            à l'université de Pise en Italie">
-        <meta property="title" content="Adrien K.T">
-        <meta name="Adrien KOUMGANG TEGANTCHOUANG" content="autobiography">
-        <meta name="author" content="Adrien KOUMGANG TEGANTCHOUANG">
-        <meta name="keywords" content="Informtatique, Informaticien,
-                                        Site web, base de données, système informatique,
-                                        Software engegnering, problem solving,
-                                        Etudiant, Computer Science, IA">
+            <nav data-lang="it">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="pages/about.html">Chi Sono</a></li>
+                    <li><a href="pages/portfolio.html">Portfolio</a></li>
+                    <li><a href="pages/cv.html">CV</a></li>
+                    <li><a href="pages/contact.html">Contatto</a></li>
+                </ul>
+            </nav>
 
-        <!--Icone de la page web-->
-        <link rel="shortcut icon" href="photos/adrien002.JPG" type="image">
-
-        <!--link aux différents fichiers CSS qui s'appliquent à cette page-->
-        <link rel="stylesheet" href="css/index.css">
-
-        <!-- https://material.io/resources/icons/?style=baseline -->
-        <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
-      rel="stylesheet">
-
-      <!-- https://material.io/resources/icons/?style=outline -->
-      <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
-      rel="stylesheet">
-
-      <!-- https://material.io/resources/icons/?style=round -->
-      <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round"
-      rel="stylesheet">
-
-      <!-- https://material.io/resources/icons/?style=sharp -->
-      <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp"
-      rel="stylesheet">
-
-      <!-- https://material.io/resources/icons/?style=twotone -->
-      <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone"
-      rel="stylesheet">
-
-        <!--Link aux différents fichiers JavaScript qui s'appliqueront à cette page-->
-
-
-        <!-- Titre de ma page web -->
-        <title>AKT-CS</title>
-    </head>
-    <body>
-        <div id="part-logo">
-            <a title="in AKT-CS you can find solutions to your IT problems" href="html/index.fr.html">
-                <img src="photos/logo3.png" alt="AKT-CS-logo">
-            </a>
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+                <label for="language-select"></label>
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="fr">Français</option>
+                    <option value="it">Italiano</option>
+                </select>
+            </div>
         </div>
-        <div id="part-text">
-            <header>
-                <nav>
-                    <ul id="menu">
-                        <li>
-                            <a title="HOME" href="#">
-                                HOME
-                            </a>
-                        </li>
-                        <li>
-                            <a title="ABOUT US" href="#">
-                                ABOUT US
-                            </a>
-                        </li>
-                        <li>
-                            <a title="OUR SERVICES" href="#">
-                                OUR SERVICES
-                            </a>
-                        </li>
-                        <li>
-                            <a title="CONTACTS" href="#">
-                                CONTACTS
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
+    </header>
 
-            <main>
-                <h2>Welcome</h2>
 
-                <p>Since our opening, we have become masters of our craft:
-                    our commitment to quality products, exceptional services and
-                    incomparable customer care keep our community coming back
-                    again and again.</p>
-            </main>
-
-            <footer>
-                <p>
-                    <span class="material-icons-outlined">
-                        email
-                    </span>
-                    adrientkoumgang@gmail.com<br>
-                    <span class="material-icons-outlined">
-                        contact_phone
-                    </span>
-                    +39 371 333 2812<br>
-                    <span class="material-icons-outlined">
-                        facebook
-                    </span>
-                    adrien koumgang<br>
-                    <span class="material-icons-outlined">
-                        public
-                    </span>
-                    <a title="web page" href="https://adrienkoumgangt.github.io/">website</a><br>
-                    <span class="material-icons-outlined">
-                        code
-                    </span>
-                    <a title="github page" href="https://github.com/adrienKoumgangT/">github</a><br>
-                    <span class="material-icons-outlined">
-                        person
-                    </span>
-                    <a title="LinkedIn" href="https://www.linkedin.com/in/adrien-koumgang-tegantchouang">LinkedIn</a>
-            </p>
-            </footer>
-        </div>
-    </body>
+    <script src="scripts/language.js"></script>
+</body>
 </html>

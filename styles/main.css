@@ -1,0 +1,73 @@
+/*
+Author: Adrien Koumgang Tegantchouang
+Version: 1.0
+*/
+
+/*
+    Déclaration de variable à utiliser dans tous le document
+*/
+:root {
+    /*Déclaration de couleurs*/
+    --blue: #0000FF;
+    --royal-blue: #4169E1;
+    --dodger-blue: #1E90FF;
+    --sky-blue: #87CEEB;
+    --navy-blue: #000080;
+    --steel-blue: #4682B4;
+    --light-blue: #ADD8E6;
+    --dark-blue: #00008B;
+    --white: #FFFFFF;
+    --black: #000000;
+    --bg: var(--royal-blue);
+    --fontColor: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
+}
+
+/*Style à appliquer à tous les élements presents dans la page*/
+* {
+    color: var(--fontColor);
+    font-family: helvetica, serif;
+}
+
+body {
+    background-image: url('../images/bg.png');
+}
+
+
+/* Multilingual Support */
+[data-lang] {
+    display: none;
+}
+
+[data-lang="en"] {
+    display: flex;
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
