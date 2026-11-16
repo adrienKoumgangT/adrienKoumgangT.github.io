@@ -10,7 +10,7 @@
   const app = $("#app");
 
   if (page === "home") {
-    app.innerHTML = `<section class="wrap"><h2>Featured projects</h2>${S.projects.slice(0, 3).map(row).join("")}<p><a href="projects.html">All projects</a></p></section>
+    app.innerHTML = `<section class="wrap"><h2>Featured projects</h2>${S.projects.filter(p => p.featured).map(row).join("")}<p><a href="projects.html">All projects</a></p></section>
     <section class="wrap"><h2>Skills</h2><dl class="skills">${S.skills.map(g => `<dt>${esc(g.g)}</dt><dd>${esc(g.i.join(", "))}</dd>`).join("")}</dl></section>
     <section class="wrap"><h2>Right now</h2><ul>${S.now.map(n => `<li>${esc(n)}</li>`).join("")}</ul></section>${contact}`;
   } else if (page === "projects") {

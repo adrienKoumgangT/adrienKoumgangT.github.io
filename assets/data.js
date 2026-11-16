@@ -20,7 +20,25 @@ const SITE = {
     "Preparing my first public AI projects. They will appear on the projects page."
   ],
   projects: [
-    { id: "distriqueue", title: "DistriQueue", tags: ["Distributed systems", "Backend"], status: "Open source",
+    { id: "github-events", featured: true, title: "GitHub event aggregation and ranking", tags: ["Data engineering", "Distributed systems"], status: "Open source",
+      summary: "A distributed analytics system that processes and ranks GitHub Archive events with Hadoop MapReduce, Apache Spark and plain Python.",
+      stack: ["Hadoop MapReduce", "Apache Spark", "Python", "REST API", "React"], repo: "https://github.com/adrienKoumgangT/github-event-aggregation-ranking",
+      problem: "Ranking events from the GitHub Archive means aggregating a very large dataset.",
+      approach: "The same ranking is built three ways (MapReduce, Spark and non-parallel Python) so the approaches can be compared. A REST API server and a React web client handle job submission and cluster monitoring.",
+      result: "" },
+    { id: "trec-search-engine", featured: true, title: "Search engine for MS MARCO passages", tags: ["Information retrieval", "Machine learning"], status: "TREC 2020 Deep Learning Track",
+      summary: "A search engine for the MS MARCO passage collection, built for the TREC 2020 Deep Learning Track.",
+      stack: ["Python", "NLTK"], repo: "https://github.com/adrienKoumgangT/search-engine-trec-2020-deep-learning-track",
+      problem: "Finding relevant passages in the large MS MARCO passage collection.",
+      approach: "A text-processing pipeline (lower-casing, tokenisation, optional stop-word removal and stemming) that streams the collection, with tests and a notebook that runs on Google Colab.",
+      result: "" },
+    { id: "student-dropout", featured: true, title: "Student dropout classifier", tags: ["Machine learning"], status: "Open source",
+      summary: "A machine learning system that predicts student dropout risk in higher education, so schools can step in early and improve retention.",
+      stack: ["Machine learning"], repo: "https://github.com/adrienKoumgangT/student-dropout-classifier",
+      problem: "Students at risk of dropping out are often identified too late.",
+      approach: "A classifier that predicts dropout risk, enabling early intervention.",
+      result: "" },
+    { id: "distriqueue", featured: true, title: "DistriQueue", tags: ["Distributed systems", "Backend"], status: "Open source",
       summary: "A high-availability distributed job scheduler with fault-tolerant task orchestration.",
       stack: ["Erlang/OTP", "RabbitMQ", "Java"], repo: "https://github.com/adrienKoumgangT/distriqueue",
       problem: "A job queue must not lose work when a node fails.",
@@ -61,7 +79,7 @@ const SITE = {
     { y: "2021–2022", t: "Licence 3 in Computer Science, Sorbonne University, Paris", p: "Studied in French and worked on a doctoral research project in graph algorithms." },
     { y: "Feb–Jul 2022", t: "Computer programmer, Sorbonne University", p: "Converted scientific code from Python to Rust and built its testing and benchmarking environment." },
     { y: "Sept 2022-Now", t: "Software engineer, ID Next (Newton)", p: "Client web and mobile products, from requirements to cloud deployment, back ends, databases and integrations." },
-    { y: "Mar 2025", t: "MSc in Artificial Intelligence and Data Engineering, University of Pisa", p: "Machine learning and data-intensive systems, on top of years of engineering practice." },
+    { y: "Mar 2025-Now", t: "MSc in Artificial Intelligence and Data Engineering, University of Pisa", p: "Machine learning and data-intensive systems, on top of years of engineering practice." },
     { y: "Next", t: "AI Engineer or AI/Software Architect", p: "Owning ML systems end to end, from data pipeline to a monitored production service." }
   ]
 };
