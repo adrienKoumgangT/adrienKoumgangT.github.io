@@ -1,7 +1,7 @@
 (() => {
   const S = SITE, page = document.body.dataset.page, $ = s => document.querySelector(s);
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-  const nav = [["index.html", "Home", "home"], ["projects.html", "Projects", "projects"], ["journey.html", "Journey", "journey"]];
+  const nav = [["index.html", "Home", "home"], ["projects.html", "Projects", "projects"], ["experience.html", "Experience", "experience"], ["education.html", "Education", "education"], ["journey.html", "Journey", "journey"]];
   const cur = k => (page === k || (page === "project" && k === "projects")) ? ' aria-current="page"' : "";
   $("#site-header").innerHTML = `<div class="accent" aria-hidden="true"></div><div class="wrap bar"><a class="brand" href="index.html">${esc(S.short)}</a><nav aria-label="Main">${nav.map(n => `<a href="${n[0]}"${cur(n[2])}>${n[1]}</a>`).join("")}<a href="index.html#contact">Contact</a></nav></div>`;
   $("#site-footer").innerHTML = `<div class="wrap">Adrien Koumgang Tegantchouang, Pisa, Italy. ${S.links.map(l => `<a href="${l[1]}" rel="noopener">${l[0]}</a>`).join(" ")}</div>`;
@@ -25,7 +25,7 @@
     });
   } else if (page === "project") {
     const p = S.projects.find(x => x.id === (document.body.dataset.id || new URLSearchParams(location.search).get("id")));
-    if (!p) app.innerHTML = `<section class="wrap"><h1 class="page">Project not found</h1><p><a href="../projects.html">Back to all projects</a></p></section>`;
+    if (!p) app.innerHTML = `<section class="wrap"><h1 class="page">Project not found</h1><p><a href="projects.html">Back to all projects</a></p></section>`;
     else {
       document.title = `${p.title} | Adrien Koumgang Tegantchouang`;
       const part = (h, t) => t ? `<h2>${h}</h2><p>${esc(t)}</p>` : "";
@@ -33,7 +33,13 @@
       const fig = p.diagram ? `<h2>Architecture</h2><figure><img src="${esc(p.diagram)}" alt="${esc(p.diagramAlt || p.title + " architecture diagram")}"></figure>` : "";
       app.innerHTML = `<section class="wrap narrow"><p><a href="projects.html">All projects</a></p><h1 class="page">${esc(p.title)}</h1><p class="lead">${esc(p.summary)}</p><p class="meta">${esc(p.stack.join(", "))}. ${esc(p.status)}.</p>${part("My role", p.role)}${part("The problem", p.problem)}${part("The approach", p.approach)}${list("Highlights", p.highlights)}${fig}${list("Key decisions", p.decisions)}${part("The result", p.result)}${part("What I learned", p.lessons)}${p.repo ? `<p><a class="btn" href="${p.repo}" rel="noopener">View code on GitHub</a></p>` : ""}</section>`;
     }
+  } else if (page === "experience") {
+    const x = S.experience, li = a => a.map(i => `<li>${esc(i)}</li>`).join("");
+    app.innerHTML = `<section class="wrap narrow"><h1 class="page">${esc(x.role)}, ${esc(x.org)}</h1><p class="meta">${esc(x.period)}</p><p class="lead">${esc(x.intro)}</p><p class="meta">${esc(x.note)}</p><h2>What I do</h2><ul>${li(x.scope)}</ul><h2>Skills I developed</h2><dl class="skills">${x.skills.map(s => `<dt>${esc(s[0])}</dt><dd>${esc(s[1])}</dd>`).join("")}</dl><h2>What this experience gave me</h2><ul>${li(x.lessons)}</ul><p><a href="education.html">My studies</a> · <a href="projects.html">Projects</a></p></section>`;
+  } else if (page === "education") {
+    const block = (b, h) => `<h2 id="${b.id}">${esc(b.degree)}</h2><p class="meta">${esc(b.school)}. ${esc(b.period)}.</p><p>${esc(b.intro)}</p>` + b.themes.map(t => `<h3>${esc(t[0])}</h3><ul>${t[1].map(c => `<li><strong>${esc(c[0])}</strong>${c[1] ? `<span class="meta">${esc(c[1])}</span>` : ""}${c[2] ? `<p>${esc(c[2])}</p>` : ""}</li>`).join("")}</ul>`).join("");
+    app.innerHTML = `<section class="wrap narrow"><h1 class="page">Education</h1><p>From mathematics in Cameroon to AI and data engineering in Italy: the studies behind my work. See the <a href="journey.html">journey</a> for the full timeline.</p>${["master", "bachelor", "sorbonne"].map(k => block(S.education[k])).join("")}</section>`;
   } else if (page === "journey") {
-    app.innerHTML = `<section class="wrap narrow"><h1 class="page">Journey</h1><p>From a high-school diploma in Cameroon to AI and data engineering in Italy.</p><ol class="tl">${S.journey.map(j => `<li><span class="yr">${esc(j.y)}</span><h3>${esc(j.t)}</h3><p>${esc(j.p)}</p></li>`).join("")}</ol></section>`;
+    app.innerHTML = `<section class="wrap narrow"><h1 class="page">Journey</h1><p>From a high-school diploma in Cameroon to AI and data engineering in Italy.</p><ol class="tl">${S.journey.map(j => `<li><span class="yr">${esc(j.y)}</span><h3>${j.href ? `<a href="${j.href}">${esc(j.t)}</a>` : esc(j.t)}</h3><p>${esc(j.p)}</p></li>`).join("")}</ol></section>`;
   }
 })();

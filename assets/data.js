@@ -78,11 +78,88 @@ const SITE = {
     { y: "2017", t: "High-school diploma", p: "I finished high school in Cameroon." },
     { y: "2017–2018", t: "First year of mathematics, and Italian", p: "I did Licence 1 in mathematics and learned Italian, which opened the way to studying in Italy." },
     { y: "Aug 2018", t: "Travel to Italy", p: "I get my student visa to continue my studies in Italy and I'm going to enroll in Computer Science at the University of Pisa." },
-    { y: "2018–2022", t: "BSc in Computer Science, University of Pisa", p: "Programming, algorithms, operating systems, networks and languages such as OCaml and C." },
-    { y: "2021–2022", t: "Licence 3 in Computer Science, Sorbonne University, Paris", p: "Studied in French and worked on a doctoral research project in graph algorithms." },
+    { y: "2018–2022", href: "education.html#bachelor", t: "BSc in Computer Science, University of Pisa", p: "Programming, algorithms, operating systems, networks and languages such as OCaml and C." },
+    { y: "2021–2022", href: "education.html#sorbonne", t: "Licence 3 in Computer Science, Sorbonne University, Paris", p: "Studied in French and worked on a doctoral research project in graph algorithms." },
     { y: "Feb–Jul 2022", t: "Computer programmer, Sorbonne University", p: "Converted scientific code from Python to Rust and built its testing and benchmarking environment." },
-    { y: "Sept 2022-Now", t: "Software engineer, ID Next (Newton)", p: "Client web and mobile products, from requirements to cloud deployment, back ends, databases and integrations." },
-    { y: "Mar 2025-Now", t: "MSc in Artificial Intelligence and Data Engineering, University of Pisa", p: "Machine learning and data-intensive systems, on top of years of engineering practice." },
+    { y: "Sept 2022", href: "experience.html", t: "Software engineer, ID Next (Newton)", p: "Client web and mobile products, from requirements to cloud deployment, back ends, databases and integrations." },
+    { y: "Mar 2025", href: "education.html#master", t: "MSc in Artificial Intelligence and Data Engineering, University of Pisa", p: "Machine learning and data-intensive systems, on top of years of engineering practice." },
     { y: "Next", t: "AI Engineer or AI/Software Architect", p: "Owning ML systems end to end, from data pipeline to a monitored production service." }
   ]
+  ,
+  experience: {
+    org: "ID Next (Newton)", role: "Software Engineer", period: "September 2022 to present",
+    intro: "I work as a software engineer at ID Next, part of the Newton group. I take client projects from the first conversation about needs to production, and I keep them running afterwards.",
+    note: "Client projects are covered by confidentiality, so this page describes the type of work, not named clients.",
+    scope: [
+      "Analyse customer needs and help define the technical and functional specifications.",
+      "Design and build web and mobile applications to client requirements.",
+      "Design modular, scalable and secure software architectures.",
+      "Design, develop and manage relational and non-relational databases.",
+      "Integrate third-party APIs, external services and cloud services.",
+      "Maintain existing software, fixing defects and evolving features.",
+      "Write technical documentation and apply development best practices.",
+      "Optimise application performance and security.",
+      "Work with design and project-management teams so the interface, the customer experience and the application logic stay consistent.",
+      "Take part in technical reviews and progress meetings with clients and the internal team."
+    ],
+    skills: [
+      ["Architecture and back end", "REST APIs, microservices and modular design, with Python (Django, Flask) and Java (Tomcat)."],
+      ["Data", "Relational and non-relational stores: MySQL, Oracle, Redis and DynamoDB."],
+      ["Cloud and delivery", "AWS (including Lambda), Docker, Kubernetes and Git, with monitoring through AWS CloudWatch and Internal logging services."],
+      ["Client and team work", "Requirements analysis, technical reviews, documentation, and working with designers and project managers."]
+    ],
+    lessons: [
+      "Production thinking: a system must be secure, documented and maintainable, not only correct.",
+      "Turning vague needs into specifications that a team can build.",
+      "Trade-offs: performance, security, cost and delivery time pull in different directions.",
+      "A base for AI work: I know what it takes to put a service into production, which is the part of machine-learning work that is often underestimated."
+    ]
+  },
+  education: {
+    master: { id: "master", school: "University of Pisa", degree: "MSc in Artificial Intelligence and Data Engineering", period: "March 2025 to present",
+      intro: "A two-year programme (120 credits) in the engineering of AI and data-intensive systems. The courses below come from the programme and group naturally into four themes.",
+      themes: [
+        ["AI and machine learning", [
+          ["Data Mining and Machine Learning", "12 credits", "Core course on extracting knowledge from data and building predictive models."],
+          ["Deep Learning and vision", "6 credits", "Neural and computational-intelligence methods and computer vision."],
+          ["Symbolic and Evolutionary Artificial Intelligence", "6 credits", "Symbolic AI and evolutionary methods, practised in small lab projects."],
+          ["Information Retrieval and Language Technologies", "9 credits", "Search engines (inverted indexes, text processing) and language models."]
+        ]],
+        ["Data engineering", [
+          ["Large-Scale and Multi-Structured Databases", "9 credits", "Designing non-relational databases to store, update and retrieve large, complex data."],
+          ["Process Mining and Intelligence", "6 credits", "Modelling business processes in BPMN, simulating them and discovering them from event logs, with a group lab project."]
+        ]],
+        ["Systems, cloud and security", [
+          ["Cloud Computing", "9 credits", "Cloud infrastructure and platforms, and programming models for cloud systems."],
+          ["Distributed Systems and Middleware Technologies", "6 credits", "Models, paradigms and algorithms of distributed software, and the middleware that supports it."],
+          ["Internet of Things", "9 credits", "The IoT paradigm, its enabling technologies, and how to build IoT systems."],
+          ["Performance Evaluation of Computer Systems and Networks", "9 credits", "Simulation with OMNeT++, queueing models and capacity planning, with a group project."],
+          ["Foundations of Cybersecurity", "9 credits", "Applied cryptography, secure coding and web security, to design a secure distributed application."]
+        ]],
+        ["Optimisation and management", [
+          ["Optimization Methods and Game Theory", "6 credits", "Nonlinear optimisation and game theory, solved with MATLAB."],
+          ["Business and Project Management", "9 credits", "Strategy, financial management and a project-management module."]
+        ]]
+      ] },
+    bachelor: { id: "bachelor", school: "University of Pisa", degree: "BSc in Computer Science", period: "2018 to 2022",
+      intro: "A broad foundation in programming, algorithms, systems and mathematics.",
+      themes: [
+        ["Programming and software", [
+          ["Programming I and Laboratory"], ["Programming II"], ["Programming of Interfaces"], ["Software Engineering"], ["Logic for Programming"]
+        ]],
+        ["Algorithms and theory", [
+          ["Algorithmics and Laboratory"], ["Computability and Complexity"], ["Discrete Mathematics and Linear Algebra"]
+        ]],
+        ["Systems, networks and data", [
+          ["Computer Architecture"], ["Operating Systems and Laboratory"], ["Computer Networks and Laboratory"], ["Databases"], ["Cryptography"]
+        ]],
+        ["Mathematics and sciences", [
+          ["Mathematical Analysis"], ["Probability and Statistics"], ["Numerical Calculus"], ["Operations Research"], ["Physics"]
+        ]],
+        ["Artificial intelligence", [["Introduction to Artificial Intelligence"]]]
+      ] },
+    sorbonne: { id: "sorbonne", school: "Sorbonne University, Paris", degree: "Licence 3 in Computer Science", period: "September 2021 to July 2022",
+      intro: "A year in Paris, studying in French. From February to July 2022 I worked as a programmer on a doctoral research project on the modular decomposition of graphs: I converted the scientific code from Python to Rust, built a testing and benchmarking environment, and integrated the result into the thesis framework with the researchers.",
+      themes: [] }
+  }
 };

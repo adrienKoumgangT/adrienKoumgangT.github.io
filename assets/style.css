@@ -47,4 +47,16 @@ footer{margin-top:4rem;padding:2rem 0;border-top:1px solid var(--line);color:var
 footer a{margin-left:.75rem}
 @media (max-width:640px){.row{grid-template-columns:1fr;gap:.5rem}.skills{grid-template-columns:1fr;gap:0}.skills dd{margin-bottom:.75rem}}
 figure{margin:1rem 0}img{max-width:100%;height:auto}
-.narrow ul{padding-left:1.25rem}
+/* Visual separation on detail pages (experience, education, case studies) */
+.narrow h2{position:relative;margin:3.5rem 0 1rem;padding-top:1.5rem;border-top:2px solid var(--line)}
+.narrow h2::before{content:"";position:absolute;top:-2px;left:0;width:4.5rem;height:2px;background:linear-gradient(90deg,var(--g),var(--t),var(--b))}
+.narrow h3{margin:2.25rem 0 .5rem;padding-left:.7rem;border-left:4px solid var(--g);font-size:1.15rem}
+.narrow ul{list-style:none;margin:.5rem 0 1rem;padding:0;border-bottom:1px solid var(--line)}
+.narrow ul li{position:relative;padding:.85rem 0 .85rem 1.25rem;border-top:1px solid var(--line)}
+.narrow ul li::before{content:"";position:absolute;left:.1rem;top:1.5rem;width:.45rem;height:.45rem;border-radius:50%;background:var(--g)}
+.narrow li strong{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:600}
+.narrow li .meta{margin-left:.5rem}
+.narrow li p{margin:.2rem 0 0}
+.narrow .skills{gap:0 1.5rem;border-bottom:1px solid var(--line)}
+.narrow .skills dt,.narrow .skills dd{padding:.85rem 0;border-top:1px solid var(--line)}
+@media (max-width:640px){.narrow .skills dt{padding-bottom:0}.narrow .skills dd{border-top:0;padding-top:.25rem}}
