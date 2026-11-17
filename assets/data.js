@@ -1,3 +1,5 @@
+// Case-study pages: a project with featured: true gets its own page at projects/<id>.html.
+// Optional fields shown on that page when filled: role, highlights[], diagram ("assets/img/x.svg"), diagramAlt, decisions[], result, lessons.
 // Edit this file to update the whole site. Fill the empty "result" fields when you have real numbers.
 const SITE = {
   short: "Adrien K. T.",
@@ -20,13 +22,13 @@ const SITE = {
     "Preparing my first public AI projects. They will appear on the projects page."
   ],
   projects: [
-    { id: "github-events", featured: true, title: "GitHub event aggregation and ranking", tags: ["Data engineering", "Distributed systems"], status: "Open source",
+    { id: "github-events", featured: true, highlights: ["The same ranking implemented with Hadoop MapReduce, Apache Spark and non-parallel Python", "A REST API server for submitting jobs", "A React web client for job submission and cluster monitoring"], title: "GitHub event aggregation and ranking", tags: ["Data engineering", "Distributed systems"], status: "Open source",
       summary: "A distributed analytics system that processes and ranks GitHub Archive events with Hadoop MapReduce, Apache Spark and plain Python.",
       stack: ["Hadoop MapReduce", "Apache Spark", "Python", "REST API", "React"], repo: "https://github.com/adrienKoumgangT/github-event-aggregation-ranking",
       problem: "Ranking events from the GitHub Archive means aggregating a very large dataset.",
       approach: "The same ranking is built three ways (MapReduce, Spark and non-parallel Python) so the approaches can be compared. A REST API server and a React web client handle job submission and cluster monitoring.",
       result: "" },
-    { id: "trec-search-engine", featured: true, title: "Search engine for MS MARCO passages", tags: ["Information retrieval", "Machine learning"], status: "TREC 2020 Deep Learning Track",
+    { id: "trec-search-engine", featured: true, highlights: ["Text pipeline: lower-casing, tokenisation, optional NLTK stop-word removal and Snowball stemming", "Streams the passage collection and skips malformed lines", "Automated tests and a notebook that runs on Google Colab"], title: "Search engine for MS MARCO passages", tags: ["Information retrieval", "Machine learning"], status: "TREC 2020 Deep Learning Track",
       summary: "A search engine for the MS MARCO passage collection, built for the TREC 2020 Deep Learning Track.",
       stack: ["Python", "NLTK"], repo: "https://github.com/adrienKoumgangT/search-engine-trec-2020-deep-learning-track",
       problem: "Finding relevant passages in the large MS MARCO passage collection.",
@@ -38,7 +40,7 @@ const SITE = {
       problem: "Students at risk of dropping out are often identified too late.",
       approach: "A classifier that predicts dropout risk, enabling early intervention.",
       result: "" },
-    { id: "distriqueue", featured: true, title: "DistriQueue", tags: ["Distributed systems", "Backend"], status: "Open source",
+    { id: "distriqueue", featured: true, highlights: ["Fault-tolerant task orchestration on Erlang/OTP", "RabbitMQ as the message broker", "Designed for high availability"], title: "DistriQueue", tags: ["Distributed systems", "Backend"], status: "Open source",
       summary: "A high-availability distributed job scheduler with fault-tolerant task orchestration.",
       stack: ["Erlang/OTP", "RabbitMQ", "Java"], repo: "https://github.com/adrienKoumgangT/distriqueue",
       problem: "A job queue must not lose work when a node fails.",
@@ -75,6 +77,7 @@ const SITE = {
   journey: [
     { y: "2017", t: "High-school diploma", p: "I finished high school in Cameroon." },
     { y: "2017–2018", t: "First year of mathematics, and Italian", p: "I did Licence 1 in mathematics and learned Italian, which opened the way to studying in Italy." },
+    { y: "Aug 2018", t: "Travel to Italy", p: "I get my student visa to continue my studies in Italy and I'm going to enroll in Computer Science at the University of Pisa." },
     { y: "2018–2022", t: "BSc in Computer Science, University of Pisa", p: "Programming, algorithms, operating systems, networks and languages such as OCaml and C." },
     { y: "2021–2022", t: "Licence 3 in Computer Science, Sorbonne University, Paris", p: "Studied in French and worked on a doctoral research project in graph algorithms." },
     { y: "Feb–Jul 2022", t: "Computer programmer, Sorbonne University", p: "Converted scientific code from Python to Rust and built its testing and benchmarking environment." },

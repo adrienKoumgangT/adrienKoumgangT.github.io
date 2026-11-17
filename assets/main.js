@@ -5,7 +5,8 @@
   const cur = k => (page === k || (page === "project" && k === "projects")) ? ' aria-current="page"' : "";
   $("#site-header").innerHTML = `<div class="accent" aria-hidden="true"></div><div class="wrap bar"><a class="brand" href="index.html">${esc(S.short)}</a><nav aria-label="Main">${nav.map(n => `<a href="${n[0]}"${cur(n[2])}>${n[1]}</a>`).join("")}<a href="index.html#contact">Contact</a></nav></div>`;
   $("#site-footer").innerHTML = `<div class="wrap">Adrien Koumgang Tegantchouang, Pisa, Italy. ${S.links.map(l => `<a href="${l[1]}" rel="noopener">${l[0]}</a>`).join(" ")}</div>`;
-  const row = p => `<article class="row" data-tags="${esc(p.tags.join("|"))}"><div><h3><a href="project.html?id=${p.id}">${esc(p.title)}</a></h3><p>${esc(p.summary)}</p></div><p class="meta">${esc(p.stack.join(", "))}<br>${esc(p.status)}</p></article>`;
+  const url = p => p.featured ? `projects/${p.id}.html` : `project.html?id=${p.id}`;
+  const row = p => `<article class="row" data-tags="${esc(p.tags.join("|"))}"><div><h3><a href="${url(p)}">${esc(p.title)}</a></h3><p>${esc(p.summary)}</p></div><p class="meta">${esc(p.stack.join(", "))}<br>${esc(p.status)}${p.featured ? " · Case study" : ""}</p></article>`;
   const contact = `<section class="wrap" id="contact"><h2>Contact</h2><p>For roles, collaborations or questions, write to <a href="mailto:${S.email}">${S.email}</a>, or find me on ${S.links.map(l => `<a href="${l[1]}" rel="noopener">${l[0]}</a>`).join(", ")}.</p></section>`;
   const app = $("#app");
 
@@ -23,12 +24,14 @@
       document.querySelectorAll("#list .row").forEach(r => r.hidden = b.dataset.t && !r.dataset.tags.split("|").includes(b.dataset.t));
     });
   } else if (page === "project") {
-    const p = S.projects.find(x => x.id === new URLSearchParams(location.search).get("id"));
-    if (!p) app.innerHTML = `<section class="wrap"><h1 class="page">Project not found</h1><p><a href="projects.html">Back to all projects</a></p></section>`;
+    const p = S.projects.find(x => x.id === (document.body.dataset.id || new URLSearchParams(location.search).get("id")));
+    if (!p) app.innerHTML = `<section class="wrap"><h1 class="page">Project not found</h1><p><a href="../projects.html">Back to all projects</a></p></section>`;
     else {
       document.title = `${p.title} | Adrien Koumgang Tegantchouang`;
       const part = (h, t) => t ? `<h2>${h}</h2><p>${esc(t)}</p>` : "";
-      app.innerHTML = `<section class="wrap narrow"><p><a href="projects.html">All projects</a></p><h1 class="page">${esc(p.title)}</h1><p class="lead">${esc(p.summary)}</p><p class="meta">${esc(p.stack.join(", "))}. ${esc(p.status)}.</p>${part("The problem", p.problem)}${part("The approach", p.approach)}${part("The result", p.result)}${p.repo ? `<p><a class="btn" href="${p.repo}" rel="noopener">View code on GitHub</a></p>` : ""}</section>`;
+      const list = (h, a) => a && a.length ? `<h2>${h}</h2><ul>${a.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : "";
+      const fig = p.diagram ? `<h2>Architecture</h2><figure><img src="${esc(p.diagram)}" alt="${esc(p.diagramAlt || p.title + " architecture diagram")}"></figure>` : "";
+      app.innerHTML = `<section class="wrap narrow"><p><a href="projects.html">All projects</a></p><h1 class="page">${esc(p.title)}</h1><p class="lead">${esc(p.summary)}</p><p class="meta">${esc(p.stack.join(", "))}. ${esc(p.status)}.</p>${part("My role", p.role)}${part("The problem", p.problem)}${part("The approach", p.approach)}${list("Highlights", p.highlights)}${fig}${list("Key decisions", p.decisions)}${part("The result", p.result)}${part("What I learned", p.lessons)}${p.repo ? `<p><a class="btn" href="${p.repo}" rel="noopener">View code on GitHub</a></p>` : ""}</section>`;
     }
   } else if (page === "journey") {
     app.innerHTML = `<section class="wrap narrow"><h1 class="page">Journey</h1><p>From a high-school diploma in Cameroon to AI and data engineering in Italy.</p><ol class="tl">${S.journey.map(j => `<li><span class="yr">${esc(j.y)}</span><h3>${esc(j.t)}</h3><p>${esc(j.p)}</p></li>`).join("")}</ol></section>`;

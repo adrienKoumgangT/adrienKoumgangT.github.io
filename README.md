@@ -13,6 +13,7 @@ The site shows my projects, my journey (from Cameroon to Pisa, Paris and back), 
 | Home | `index.html` | Introduction, featured projects, skills, what I am doing now, contact |
 | Projects | `projects.html` | All personal, open-source and academic projects, with topic filters |
 | Project detail | `project.html?id=<project-id>` | Problem, approach, result and code link for one project |
+| Case study | `projects/<id>.html` | Full page for each featured project (`featured: true` in `data.js`) |
 | Journey | `journey.html` | Timeline of my education and career |
 
 ## Project structure
@@ -35,6 +36,7 @@ The site shows my projects, my journey (from Cameroon to Pisa, Paris and back), 
 All text that changes over time lives in `assets/data.js`. There is no build step.
 
 - **Add a project:** add an object to the `projects` array with a unique `id`, `title`, `tags`, `status`, `summary`, `stack` and optionally `repo`, `problem`, `approach` and `result`. Empty fields are hidden on the detail page. The new project appears on the projects page and gets its own detail page at `project.html?id=<id>`.
+- **Add a case-study page:** set `featured: true` on the project, add the optional fields (`role`, `highlights`, `diagram`, `decisions`, `result`, `lessons`), put the diagram image in `assets/img/`, then create `projects/<id>.html` by copying an existing one and changing the `data-id` and the title.
 - **Update skills, timeline or "right now":** edit the `skills`, `journey` or `now` arrays.
 - **Change contact links:** edit `email` and `links`.
 - **Replace the resume:** put the new PDF at the repository root as `resume.pdf`.
